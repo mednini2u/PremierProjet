@@ -1,6 +1,7 @@
 package polytech;
 
 import java.io.IOException;
+
 import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
@@ -29,17 +30,19 @@ public class Profil extends HttpServlet {
 		
 		HttpSession session = request.getSession(false);
 		
-		if(session!=null) {
+		if(session==null) {
 			String login= (String) session.getAttribute("login");
-			out.print("Bienvenue sur ton profil" + login + "\n");
+			out.print("Bienvenue sur ton profil " + login + " \n");
 			
 		}
 		else {
-			response.sendRedirect("./index.jsp");
+			response.sendRedirect("./jspJSTL");
 		}
 		
 		out.print("\n<a href='index.jsp'>Index</a>");
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		this.getServletContext().getRequestDispatcher("/WEB-INF/Profil.jsp").forward(request, response);
 	}
 
 	/**

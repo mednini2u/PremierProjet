@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Le Terrain Facile</title>
+</head>
+
+<body>
+    <header>    
+        
+        <div class="row justify-content-between" style="width : 100%">
+             <div class ="col-3 align-self-center "><a href="index.html"><img src="wire/logo4.png" alt="logo Terrain Facile"></a></div>
+             <div class ="col-6 align-self-center " style ="">
+                 <ul>
+                 <li><a href="terrain.html">Terrain</a></li>
+                 <li class="traitHead"></li>
+                 <li><a href="parc.html">Parc</a></li>
+                 <li class="traitHead"></li>
+                 <li><a href="terrain.html">Forêt</a></li>
+                 <li class="traitHead"></li>
+                 <li><a href="parc.html">Champs</a></li>
+                 <li class="traitHead"></li>
+                 <li><a href="terrain.html">Jardin</a></li>
+                 </ul>
+             </div>
+             <div class="col-3 align-self-center " style="text-align: end;">
+                 <a href="compte.html">Se connecter</a>
+                 <button class="btn btn-success linkCompte">Inscrivez-vous</button>
+             </div>
+        </div>
+    
+</header>
+
+    <div class="row bloctitreRecherches"><span class="titreRecherche">Trouvez le terrain de vos rêves </span></div>
+
+    <a style="text-decoration: none;" href="lien.html">
+        <div class="elementRecherche">
+        <div>
+            <div class="titreTerrain">Terrain plat</div>
+            <div class="caracteristiquesTerrain">4000m2</div>    
+            <div class="caracteristiquesTerrain"> 1000€/mois</div>
+        </div>
+        <div class="imgRecherche"><img style="border-radius: 15px;" src="img/Terrains/terrain1.jpg" alt="photo du terrain"/></div> <!-- 100px de haut pour les photos--> 
+    </div></a>
+    <a style="text-decoration: none;" href="lien.html">
+        <div class="elementRecherche">
+        <div>
+            <div class="titreTerrain">Terrain pour festival</div>
+            <div class="caracteristiquesTerrain">2545m2</div>    
+            <div class="caracteristiquesTerrain"> 840€/mois</div>
+        </div>
+        <div class="imgRecherche"><img style="border-radius: 15px;"src="img/Terrains/terrain2.jpg" alt="photo du terrain"/></div>
+    </div></a>
+
+    <a style="text-decoration: none;" href="lien.html">
+        <div class="elementRecherche">
+        <div>
+            <div class="titreTerrain">Terrain constructible</div>
+            <div class="caracteristiquesTerrain">300m2</div>    
+            <div class="caracteristiquesTerrain"> 800€/mois</div>
+        </div>
+        <div class="imgRecherche"><img style="border-radius: 15px;"src="img/Terrains/terrain3.jpg" alt="photo du terrain"/></div>
+    </div></a>
+
+    <a style="text-decoration: none;" href="lien.html">
+    <div class="elementRecherche">
+        <div>
+            <div class="titreTerrain">Grand terrain libre</div>
+            <div class="caracteristiquesTerrain">2000m2</div>    
+            <div class="caracteristiquesTerrain"> 470€/mois</div>
+        </div>
+        <div class="imgRecherche"><img style="border-radius: 15px;"src="img/Terrains/terrain4.jpg" alt="photo du terrain"/></div>
+    </div></a>
+
+    <a style="text-decoration: none;" href="lien.html">
+    <div class="elementRecherche">
+        <div>
+            <div class="titreTerrain">Terrain à louer</div>
+            <div class="caracteristiquesTerrain">500m2</div>    
+            <div class="caracteristiquesTerrain"> 420€/mois</div>
+        </div>
+        <div class="imgRecherche"><img style="border-radius: 15px;"src="img/Terrains/terrain5.jpg" alt="photo du terrain"/></div>
+    </div></a>
+
+    <a style="text-decoration: none;" href="lien.html">
+    <div class="elementRecherche">
+        <div>
+            <div class="titreTerrain">Terrain vert</div>
+            <div class="caracteristiquesTerrain">2000m2</div>    
+            <div class="caracteristiquesTerrain"> 800€/mois</div>
+        </div>
+        <div class="imgRecherche"><img style="border-radius: 15px;"src="img/Terrains/terrain6.jpg" alt="photo du terrain"/></div>
+    </div></a>
+
+    <div class="espaceFooter"></div>  <!--bloc qui permet d'obtenir un espace entre le haut de page et le début du contenu, il fait la taille du header-->
+
+    <footer>
+        <ul>
+            <li><a class="linkFooter" href="#">Nous contacter</a></li>
+            <li><a class="linkFooter" href="#">Qui sommes-nous ?</a></li>
+            <li><a class="linkFooter" href="#">Nos partenaires</a></li>
+            <li><a class="linkFooter" href="#">Singalez un problème</a></li>
+        </ul>
+    </footer>
+
+
+
+
+        <!--<div class="blocRecherche">
+        <form method="post" action="recherche.php">
+            <div class="surfaceLieu">
+                <div class="search"><label for="surface"> Surface (km²) :</label>
+                <input type="text" name="surface" id="surface" maxlength="6" placeholder="ex : 3000" autofocus/></div>
+                <div class="search"><label for="lieu"> Lieu (Ville, région, ...) :</label>
+                <input type="text" name="lieu" id="lieu" maxlength="20" placeholder="ex : Paris, Lorraine, .."/></div>
+            </div>
+
+            <div class="typePrix">
+                <div class="search"><label for="type"> Type de terrain :</label></br>
+                    <select style="width:150px;" name="type" id="type">
+                        <option value="agricole">Agricole</option>
+                        <option value="immobilier">Immobilier</option>
+                        <option value="sportif">Sportif</option>
+                        <option value="Loisir">Loisir</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </div>    
+                <div class="search"><label for="prixmax"> Prix max (en €):</label></br>
+                <input style="width:150px;" type="text" name="prixmax" id="prixmax" maxlength="6" placeholder="ex : 10 000"/></div>
+                <div class="search"><label for="prixmin"> Prix min (en €):</label></br>
+                <input style="width:150px;" type="text" name="prixmin" id="prixmin" maxlength="6" placeholder="ex : 3 000"/></div>
+            </div>
+
+            <div class="search"><label for="proximite">Services à proximité :</label></br>
+            <input style="width:646px" type="text" name="proximite" id="proximite" placeholder="ex: supermarché"></div>
+
+            <div class="bouton"><input style="width: 150px; height: 20px;" type="submit" value="Filtrer"></div>
+        </form>
+        </div>-->
+
+    
+
+</body>
+</html>

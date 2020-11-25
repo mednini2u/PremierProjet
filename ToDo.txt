@@ -1,0 +1,5 @@
+TO DO :
+-Méthode afficher terrains
+-Servlet Session (login/inscription/logout)
+-Coordination client soap sql
+-Bootstrap page index

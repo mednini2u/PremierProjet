@@ -36,13 +36,12 @@ public class Profil extends HttpServlet {
 			
 		}
 		else {
-			response.sendRedirect("./jspJSTL");
+			response.sendRedirect("./Con");
 		}
 		
-		out.print("\n<a href='index.jsp'>Index</a>");
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		out.print("\n<a href='Connexion.jsp'>Index</a>");
 		
-		this.getServletContext().getRequestDispatcher("/WEB-INF/Profil.jsp").forward(request, response);
+		this.getServletContext().getRequestDispatcher("/WEB-INF/Connexion.jsp").forward(request, response);
 	}
 
 	/**

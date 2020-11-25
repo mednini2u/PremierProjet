@@ -7,26 +7,55 @@
 <meta charset="ISO-8859-1">
 	<title>Login Page</title>
 	
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="css/bootstrap-grid.css" rel="stylesheet" type="text/css" />
+	<link href="js/bootstrap.js" rel="stylesheet" type="text/js" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
 	
+
 	
 </head>
 
 <body>
+<header>    
+        
+            <div class="row justify-content-between" style="width : 100%">
+                 <div class ="col-3 align-self-center "><a href="index.html"><img src="wire/logo4.png" alt="logo Terrain Facile"></a></div>
+                 <div class ="col-6 align-self-center " style ="">
+                     <ul>
+                     <li><a href="terrain.html">Terrain</a></li>
+                     <li class="traitHead"></li>
+                     <li><a href="parc.html">Parc</a></li>
+                     <li class="traitHead"></li>
+                     <li><a href="terrain.html">Forêt</a></li>
+                     <li class="traitHead"></li>
+                     <li><a href="parc.html">Champs</a></li>
+                     <li class="traitHead"></li>
+                     <li><a href="terrain.html">Jardin</a></li>
+                     </ul>
+                 </div>
+                 <div class="col-3 align-self-center " style="text-align: end;">
+                     <a href="compte.html">Se connecter</a>
+                     <button class="btn btn-success linkCompte">Inscrivez-vous</button>
+                 </div>
+            </div>
+        
+    </header>
+    
 <c:if test="${!empty sessionScope.login && !empty sessionScope.password }">
 	<c:out value="Vous êtes ${sessionScope.login }"></c:out>
 </c:if>
 
 
-<div class="col-sm-12 controls">
+<div class="col-sm-12 controls text-center">
 	<a href="./BDD" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Présentation des terrains</a>
 </div>
 
 <div class="container">    
         <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
             <div class="panel panel-success" >
-                      <div class="panel-heading p-3 mb-2 bg-succes text-white">
-                        
+                    <div class="panel-heading p-3 mb-2 bg-succes text-white">
                         <div style="float:right; font-size: 70%; position: relative; top:-6px"><a href="#">Mot de passe oublié?</a></div>
                     </div>   
 					
@@ -54,30 +83,24 @@
                                 </div>
 
 
-                                <div class="form-group">
+                                <div class="form-group text-center">
                                     <div class="col-md-12 control">
                                         <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" >
                                             
-                                        <a href="#" >
+                                        <a href="/ProjetSiteWeb/Inscription" >
                                             S'inscrire
                                         </a>
                                         </div>
                                     </div>
                                 </div>    
                                 
-                                <div class="col-sm-12 controls">
+                                <div class="col-sm-12 controls text-center">
                                       <input type="submit" id="btn-login" class="btn btn-success" value="Se connecter">
                                       
 
                                     </div>
                                     <br>
-							<!--<c:if test="${auth.connexion == true}">
-							<c:out value="Vous êtes authentifié"></c:out>
-							<a href="./logout"> <input type="button" value="Deconnexion"> </a>
-							</c:if>
-
-
-<a href="./Profil"> <input type="button" value="Profil"> </a>-->
+				
                             </form>     
 
 

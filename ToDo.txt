@@ -1,5 +1,7 @@
 TO DO :
--Méthode afficher terrains
--Servlet Session (login/inscription/logout)
--Coordination client soap sql
--Bootstrap page index
+
+- finaliser le bootstrap sur presentation de terrain + page annonce 
+
+- creer les fonctions ajouter terrain + se connecter + s'inscrire 
+
+- lier ces fonctions aux jsp 

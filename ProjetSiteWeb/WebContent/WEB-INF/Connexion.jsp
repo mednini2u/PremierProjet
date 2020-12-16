@@ -1,3 +1,5 @@
+<!-- formulaire de connexion, bootstrap fait-->
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -28,7 +30,7 @@
                      <li class="traitHead"></li>
                      <li><a href="parc.html">Parc</a></li>
                      <li class="traitHead"></li>
-                     <li><a href="terrain.html">Forêt</a></li>
+                     <li><a href="terrain.html">Forï¿½t</a></li>
                      <li class="traitHead"></li>
                      <li><a href="parc.html">Champs</a></li>
                      <li class="traitHead"></li>
@@ -44,19 +46,19 @@
     </header>
     
 <c:if test="${!empty sessionScope.login && !empty sessionScope.password }">
-	<c:out value="Vous êtes ${sessionScope.login }"></c:out>
+	<c:out value="Vous ï¿½tes ${sessionScope.login }"></c:out>
 </c:if>
 
 
 <div class="col-sm-12 controls text-center">
-	<a href="./BDD" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Présentation des terrains</a>
+	<a href="./BDD" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Prï¿½sentation des terrains</a>
 </div>
 
 <div class="container">    
         <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
             <div class="panel panel-success" >
                     <div class="panel-heading p-3 mb-2 bg-succes text-white">
-                        <div style="float:right; font-size: 70%; position: relative; top:-6px"><a href="#">Mot de passe oublié?</a></div>
+                        <div style="float:right; font-size: 70%; position: relative; top:-6px"><a href="#">Mot de passe oubliï¿½?</a></div>
                     </div>   
 					
                     <div style="padding-top:30px" class="panel-body" >

@@ -1,3 +1,5 @@
+<!-- formulaire d'inscription, bootstrap fait-->
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -22,7 +24,7 @@
                      <li class="traitHead"></li>
                      <li><a href="parc.html">Parc</a></li>
                      <li class="traitHead"></li>
-                     <li><a href="terrain.html">Forêt</a></li>
+                     <li><a href="terrain.html">Forï¿½t</a></li>
                      <li class="traitHead"></li>
                      <li><a href="parc.html">Champs</a></li>
                      <li class="traitHead"></li>
@@ -39,11 +41,11 @@
     
 <div class="container "> 
         <form method="post" action="inscription.php">
-            <h1>Crée ton compte le Terrain Facile :</h1>
+            <h1>Crï¿½e ton compte le Terrain Facile :</h1>
 
                 <div class="row justify-content-center">
                     <div class="col-4">
-                        <label for="prenom">Prénom :</label></br>
+                        <label for="prenom">Prï¿½nom :</label></br>
                         <input type="texte" name="prenom" id="prenom" placeholder=" ex: Pierre"/>
                     </div>
                     <div class="col-4">
@@ -124,20 +126,20 @@
                                 <label class="label" for="mois">Mois :</label>
                                     <select name="mois" id="mois">
                                     <option value="janvier">Janvier</option>
-                                    <option value="fevrier">Février</option>
+                                    <option value="fevrier">Fï¿½vrier</option>
                                     <option value="mars">Mars</option>
                                     <option value="avril">Avril</option>
                                     <option value="mai">Mai</option>
                                     <option value="juin">Juin</option>
                                     <option value="Juillet">Juillet</option>
-                                    <option value="Août">Août</option>
+                                    <option value="Aoï¿½t">Aoï¿½t</option>
                                     <option value="Septembre">Septembre</option>
                                     <option value="Octobre">Octobre</option>
                                     <option value="Novembre">Novembre</option>
                                     <option value="Decembre">Decembre</option>
                                     </select>
                                 
-                                <label class="label" for="annee">Année :</label>
+                                <label class="label" for="annee">Annï¿½e :</label>
                                     <select name="annee" id="annee">
                                     <option value="2001">2001</option>
                                     <option value="2000">2000</option>
@@ -163,6 +165,6 @@
         </form>
     </div>
 
-        <div class="espaceFooter"></div>  <!--bloc qui permet d'obtenir un espace entre le haut de page et le début du contenu, il fait la taille du header-->
+        <div class="espaceFooter"></div>  <!--bloc qui permet d'obtenir un espace entre le haut de page et le dï¿½but du contenu, il fait la taille du header-->
 </body>
 </html>

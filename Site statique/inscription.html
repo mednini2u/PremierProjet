@@ -3,53 +3,56 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/bootstrap.css"/>
-    <link rel="stylesheet" href="css/style2.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
     <title>Le Terrain Facile</title>
 </head>
     
 <body>
     <header>    
-        <a href="index.html"><img src="wire/logo4.png" alt="logo Terrain Facile"></a>
-        <ul>
-            <li><a href="terrain.html">Terrain</a></li>
-            <li class="traitHead"></li>
-            <li><a href="parc.html">Parc</a></li>
-            <li class="traitHead"></li>
-            <li><a href="terrain.html">Forêt</a></li>
-            <li class="traitHead"></li>
-            <li><a href="parc.html">Champs</a></li>
-            <li class="traitHead"></li>
-            <li><a href="terrain.html">Jardin</a></li>
-        </ul>
-        <div class="head2">
-            <a href="compte.html">Se connecter</a>
-            <a class="linkCompte" href="inscription.html">Inscrivez-vous</a>
-        </div>
+        <div class="row justify-content-between" style="width : 100%">
+            <div class ="col-3 align-self-center "><a href="index.html"><img src="wire/logo4.png" alt="logo Terrain Facile"></a></div>
+           <!-- <div class ="col-6 align-self-center " style ="">
+                <ul>
+                <li><a href="terrain.html">Terrain</a></li>
+                <li class="traitHead"></li>
+                <li><a href="parc.html">Parc</a></li>
+                <li class="traitHead"></li>
+                <li><a href="terrain.html">Forêt</a></li>
+                <li class="traitHead"></li>
+                <li><a href="parc.html">Champs</a></li>
+                <li class="traitHead"></li>
+                <li><a href="terrain.html">Jardin</a></li>
+                </ul>
+            </div>-->
+            <div class="col-3 align-self-center " style="text-align: end;">
+                <a href="compte.html">Se connecter</a>
+                <a class="btn btn-success linkCompte" href="inscription.html">Inscrivez-vous</a>
+            </div>
+       </div>
     </header>
 
-    <div class="container "> 
-        <form method="post" action="inscription.php">
-            <h1>Crée ton compte le Terrain Facile :</h1>
+    <div class="container"> 
+        <div class="row bloctitreRecherches" style="width:600px"><span class="titreRecherche">Crée ton compte :</span></div>
 
-                <div class="row justify-content-center">
+                <div class="row justify-content-center" style="margin : auto 0 10px 110px">
                     <div class="col-4">
-                        <label for="prenom">Prénom :</label></br>
+                        <label class="label" for="prenom">Prénom :</label></br>
                         <input type="texte" name="prenom" id="prenom" placeholder=" ex: Pierre"/>
                     </div>
                     <div class="col-4">
                         <label class="label" for="nom">Nom :</label></br>
-                        <input  type="texte" name="nom" id="nom" placeholder=" ex: Dupont"/>
+                        <input  type="text" name="nom" id="nom" placeholder=" ex: Dupont"/>
                     </div>
                 </div>
 
-                <div class="row row justify-content-center">
+                <div class="row row justify-content-center" style="margin : auto 0 10px 110px">
                     <div class="col-8">
                         <label class="label" for="mail">Adresse e-mail :</label></br>
-                        <input class="inputMail" type="email" name="mail" id="mail" placeholder= "exemple@leterrainfacile.com">
+                        <input style="width: 536px;" type="email" name="mail" id="mail" placeholder= "exemple@leterrainfacile.com">
                     </div>
                 </div>
 
-                <div class="row justify-content-center">
+                <div class="row justify-content-center" style="margin : auto 0 10px 110px">
                     <div class="col-4">
                         <label class="label" for="mdp">Mot de passe :</label></br>
                         <input type="password" name="mdp" id="mdp" placeholder=" ex: motdepasse"/>
@@ -60,7 +63,7 @@
                     </div>
                 </div>
 
-                <div class="row justify-content-center">
+                <div class="row justify-content-center" style="margin : auto 0 10px 110px">
               
                     <div class="col-4"> Genre </br>
                         <label class="label" for="madame"> Mme</label>
@@ -70,11 +73,11 @@
                     </div>
                     <div class="col-4">
                         <label class="label" for="societe">Societe : </label></br>
-                        <input class="inputInscription" type="text" name="societe" id="societe" placeholder=" Facultatif">
+                        <input type="text" name="societe" id="societe" placeholder=" Facultatif">
                     </div>
                 </div>
 
-                <div class="row justify-content-center">
+                <div class="row justify-content-center" style="margin : auto 0 10px 110px">
                     <div class="col-8"> Date de naissance : </br>
                             <label class="label" for="jour">Jour :</label>
                                     <select name="jour" id="jour">
@@ -146,7 +149,7 @@
                         </div>
                 </div>  
 
-                <div class="row">
+                <div class="row" style="margin : 20px 0 0 110px">
                     <div class="col-2"></div>
                     <button class="btn btn-primary"> S'inscrire </button>
             </div>

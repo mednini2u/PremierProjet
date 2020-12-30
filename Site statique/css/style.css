@@ -331,14 +331,11 @@ h1 {
 }
 .elementRecherche {
     width: 700px;
-    height: 100px;
     margin: 20px auto;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
+    padding: 5px;
     background-color:#f2f7f3;
-    border-radius: 15px;
-    box-shadow:  1px 1px 0px #636362;
+    border-radius: 10px;
+    /*box-shadow:  1px 1px 0px #636362;*/
 }
 .titreTerrain {
     font-size: 1.6em;
@@ -352,10 +349,8 @@ h1 {
     color: black;
 }
 .imgRecherche {
-    width: 180px;
-    display: flex;
-    justify-content: center;
-    border-radius: 15px;
+    width: 100px;
+    border-radius: 0px;
 }
 .simplif {
     font-size: 1.4em;
@@ -476,20 +471,20 @@ h1 {
     padding: 0;
 }
 .inputDesc {
-    width: 450px;
+    width: 530px;
     height: 200px;
-    border: 0.5px solid black;
+    /*border: 0.5px solid black;
     border-radius: 5px;
     padding: 5px;
     margin: 0;
     text-align: justify;
     font-family: Georgia sans-serif;    
-    font-size: 0.8em;
+    font-size: 0.8em;*/
 }
 .submitAnnonce {
-    width: 450px;
+    /*width: 450px;
     margin: 20px auto;
-    height: 20px;
+    height: 400px;*/
 }
 .boutonAnnonce {
     text-align: center;
@@ -497,11 +492,14 @@ h1 {
     height: 20px;
 }
 .inputMail {
-    width: 446px; 
+    width: 600px; 
     height: 20px; 
     border-radius: 5px; 
     border: 0.5px solid black;
 }
 .label {
     font-size: 1.3em;
+}
+.textAnnonce {
+    font-size : 0.9em;
 }

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Le Terrain Facile</title>
+</head>
+
+<body>
+    <header>    
+        <div class="row justify-content-between vw-100">
+            <div class ="col-3 align-self-center "><a href="index.html"><img src="wire/logo4.png" alt="logo Terrain Facile"></a></div>
+           <!-- <div class ="col-6 align-self-center " style ="">
+                <ul>
+                <li><a href="terrain.html">Terrain</a></li>
+                <li class="traitHead"></li>
+                <li><a href="parc.html">Parc</a></li>
+                <li class="traitHead"></li>
+                <li><a href="terrain.html">Forêt</a></li>
+                <li class="traitHead"></li>
+                <li><a href="parc.html">Champs</a></li>
+                <li class="traitHead"></li>
+                <li><a href="terrain.html">Jardin</a></li>
+                </ul>
+            </div>-->
+            <div class="col-3 align-self-center " style="text-align: end;">
+                <a href="compte.html">Se connecter</a>
+                <a class="btn btn-success linkCompte" href="inscription.html">Inscrivez-vous</a>
+            </div>
+       </div>
+    </header>
+
+    <div class="espace"></div>  <!--bloc qui permet d'obtenir un espace entre le haut de page et le début du contenu, il fait la taille du header-->
+
+    <!-- To Do : le bloc ci-dessous est censé permettre d'afficher soit le "blocAnnonceoffre" soit le "blocAnnonceDemande", nécessite une fonction JS-->
+    <div class="row bloctitreRecherches" style="width:600px"><span class="titreRecherche">Déposes ton annonce :</span></div>
+
+    <div class="container">
+        <form>
+            <div class="row titreAnnonce">
+                <div class="col">
+                    <label class="textAnnonce" for="titre">Titre de l'offre :</label>
+                    <input style="width : 520px" type="texte" name="titre" id="titreOffre"/>
+                </div>
+            </div>
+            
+            <div class="row justify-content-between surfacePrix">
+                <div class="col-5">
+                    <label class="textAnnonce" for="surface">Surface (m²) :</label><br>
+                    <input type="text" name="surface" id="surface"/>
+                </div>
+                <div class="col-5">
+                    <label class="textAnnonce" for="prix">Prix (€/j) :</label><br>
+                    <input type="text" name="jour" id="jour"/>
+                </div>
+            </div>
+                
+            <div class="row justify-content-center">
+                <div class="col-4">
+                    <label for="desc">Description :</label>
+                    <textarea class="inputDesc" id="desc"></textarea>
+                </div>
+            </div>
+
+            <a class="btn btn-primary" style="margin : 10px 0 0 350px">Déposez votre offre</a>
+
+        </form>
+    </div>
+
+    
+
+    <div class="espaceFooter"></div>  <!--bloc qui permet d'obtenir un espace entre le haut de page et le début du contenu, il fait la taille du header-->
+
+    <footer>
+        <ul>
+            <li><a class="linkFooter" href="#">Nous contacter</a></li>
+            <li><a class="linkFooter" href="#">Qui sommes-nous ?</a></li>
+            <li><a class="linkFooter" href="#">Nos partenaires</a></li>
+            <li><a class="linkFooter" href="#">Singalez un problème</a></li>
+        </ul>
+    </footer>
+
+</body>
+</html>

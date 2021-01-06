@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,32 +33,55 @@
        </div>
     </header>
 
-    <div class="espace"></div>  <!--bloc qui permet d'obtenir un espace entre le haut de page et le début du contenu, il fait la taille du header-->
+    <form action="Annonce" method="post">
 
-    <!-- To Do : le bloc ci-dessous est censé permettre d'afficher soit le "blocAnnonceoffre" soit le "blocAnnonceDemande", nécessite une fonction JS-->
-    <div class="row bloctitreRecherches" style="width:600px"><span class="titreRecherche">Déposes ton annonce :</span></div>
+<div class="form-group mx-sm-3 mb-2">
+    <label for="exampleInputEmail1">Identifiant</label>
+    <input type="text" name="ida" class="form-control" id="ida" placeholder="ID">
+  </div>
+<div class="form-row">
+    <div class="col">
+      <input type="text" name="noma" id="noma" class="form-control" placeholder="Nom">
+    </div>
+    <div class="col">
+      <input type="text" name="prixa" id="prixa" class="form-control" placeholder="Prix">
+    </div>
+    <div class="col">
+      <input type="text" name="surfacea" id="surfacea" class="form-control" placeholder="Surface">
+    </div>
+  </div>
+	<br>
+ 	<div class="text-center">
+	<button type="submit" class="btn btn-secondary btn-sm center-block">Ajouter un terrain</button>
+ 	</div>
+         
+	</form>Déposez votre offre</a>
+	
+	<form action="Annonce" method="post">
+	
+	   <div class="row bloctitreRecherches" style="width:600px"><span class="titreRecherche">Déposes ton annonce :</span></div>
 
             <div class="row titreAnnonce">
                 <div class="col">
                     <label class="textAnnonce" for="titre">Titre de l'offre :</label>
-                    <input style="width : 520px" type="texte" name="titre" id="titreOffre"/>
+                    <input style="width : 520px" type="text" name="noma" id="noma"/>
                 </div>
             </div>
             
             <div class="row justify-content-between surfacePrix">
                 <div class="col-5">
                     <label class="textAnnonce" for="surface">Surface (m²) :</label><br>
-                    <input type="text" name="surface" id="surface"/>
+                    <input type="text" name="surfacea" id="surfacea"/>
                 </div>
                 <div class="col-5">
                     <label class="textAnnonce" for="prix">Prix (€/j) :</label><br>
-                    <input type="text" name="jour" id="jour"/>
+                    <input type="text" name="prixa" id="prixa"/>
                 </div>
             </div>
 
-            <a class="btn btn-primary" style="margin : 10px 0 0 350px">Déposez votre offre</a>
+            <button type="submit" class="btn btn-secondary btn-sm center-block">Ajouter un terrain</button>
 
-     
+     </form>
 
     
 

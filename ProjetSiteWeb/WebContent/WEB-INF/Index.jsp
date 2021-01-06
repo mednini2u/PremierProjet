@@ -1,0 +1,77 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="wire/logo2.jpg" />
+    <title>Le Terrain Facile</title>
+    </head>
+
+<body>
+    <header>    
+        
+            <div class="row justify-content-between vw-100">
+                 <div class ="col-3 align-self-center "><a href="index.html"><img src="wire/logo4.png" alt="logo Terrain Facile"></a></div>
+             
+                 <div class="col-3 align-self-center " style="text-align: end;">
+                     <a href="compte.html">Se connecter</a>
+                     <a class="btn btn-success linkCompte" href="inscription.html">Inscrivez-vous</a>
+                 </div>
+            </div>
+            
+        
+    </header>
+
+    
+	<div class="row justify-content-around" style="margin : 50px" >
+		<div class="col-lg-4 col-3-md" style="margin : auto 0;">
+			<div class="accroche">Organisez tout votre évènement, en un seul clic</div>
+    		<a class="btn w-50 btn-success annonce lienAnnonce" style="text-align: center;" href="/ProjetSiteWeb/Annonce" style="margin : auto">Déposer une annonce</a>
+    		<div class="decouvrir"><a class="lienDecouvrir" href="/ProjetSiteWeb/PresTerrain">Découvrir nos terrains</a></div>
+        </div>
+        <div class ="col-lg-5 col-md-1 col-xs-2 h-100"><img src="img/photo.jpg" alt="photo de terrain"/></div>
+    </div>	
+
+	<div class=trait></div>  <!--bloc permettant de créer un trait horizontal avec une bordure-->
+
+	<div class="row justify-content-around" style="margin : 50px">
+        <div class="col-3 align-self-center accroche" >Simplifiez vos recherches</div>      
+        <div class="col-4 simplif"> Vous pouvez trouver tout ce dont vous avez besoin, juste ici. Ne naviguez plus entre les sites de locations et de prestataires. Ici, vous avez tout à portée de main.</div>
+    </div>
+
+    <div class=trait></div>
+
+    <div class="row justify-content-around" style="margin : 50px">
+        <div class="col-5 simplif">En effet, il serait dommage d'enfermer ses invités dans une petite salle à un prix exorbitant. Vous vivez dans un pays comportant une multitude de magnifiques terrains libres, il serait dommage de ne pas en profiter.</div>
+        <div class="col-4 align-self-center accroche ">Votre future salle de mariage, pourrait être un terrain</div>        
+    </div>
+
+    <div class=trait></div>
+
+    <div class="row justify-content-around" style="margin : 50px">
+        <div class="col-3 align-self-center accroche" style="width:400px">Soyez libres de la durée de votre location</div>
+        <div class="col-4 simplif">Rien ne vous oblige à louer un terrain une semaine si vous n'en avez besoin que un jour ou deux. Soyez maîtres de vos locations avec LeTerrainFacile.</div>
+    </div>
+
+    <div class="espaceFooter"></div>  <!--bloc qui permet d'obtenir un espace entre le haut de page et le début du contenu, il fait la taille du header-->
+</div>
+   <footer>
+    <div class="row">
+        <div class="col">
+            <ul>
+                <li><a class="linkFooter" href="#">Nous contacter</a></li>
+                <li><a class="linkFooter" href="#">Qui sommes-nous ?</a></li>
+                <li><a class="linkFooter" href="#">Nos partenaires</a></li>
+                <li><a class="linkFooter" href="#">Signalez un problème</a></li>
+            </ul>
+        </div>
+    </div>
+    </footer>
+    
+    </html>
+</body>

@@ -1,33 +1,30 @@
 package bdd;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
-
 /**
- * Servlet implementation class Controller
+ * Servlet implementation class Terrains
  */
-@WebServlet("/Controller")
-public class Controller extends HttpServlet {
+@WebServlet("/Terrains")
+public class Terrains extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    private Ter terrains = new Ter();
+	private Ter terrains = new Ter();
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Controller() {
+    public Terrains() {
         super();
         // TODO Auto-generated constructor stub
     }
 
-	
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setAttribute("terrains", terrains);
 		
@@ -36,8 +33,6 @@ public class Controller extends HttpServlet {
 		request.setAttribute("res", ListeTerrain.afficher());
 		
 		this.getServletContext().getRequestDispatcher("/WEB-INF/PresTerrain.jsp").forward(request,response);
-		
-		
 	}
 
 	/**
@@ -53,7 +48,6 @@ public class Controller extends HttpServlet {
 		Ter terrains = new Ter();
 		terrains.ajouter(ter);
 		doGet(request, response);
-		
 	}
 
 }

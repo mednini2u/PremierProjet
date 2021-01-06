@@ -101,7 +101,7 @@ public class Ter {
 		
 		try {
 			PreparedStatement prs = this.connection.prepareStatement("INSERT INTO `terrains`(`id`, `nom`, `prix`, `surface`) VALUES (?,?,?,?);");
-			prs.setInt(1, terrain.getId());
+			prs.setInt(1, 56);
 			prs.setString(2, terrain.getNom());
 			prs.setDouble(3, terrain.getPrix());
 			prs.setDouble(4, terrain.getSurface());

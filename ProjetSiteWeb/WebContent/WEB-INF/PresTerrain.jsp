@@ -7,31 +7,106 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Présentation des terrains</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="css/bootstrap-grid.css" rel="stylesheet" type="text/css" />
+	<link href="js/bootstrap.js" rel="stylesheet" type="text/js" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-
-
-<c:out value="---Base de données---"></c:out>
-<c:forEach items="${res }" var="ter">
-
-<a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">${ter.nom}</h5>
-    </div>
-    <p class="mb-1">${ter.surface} m² et ${ter.prix} euros</</p>
+<header>    
     
-  </a>
-	
+            <div class="row justify-content-between" style="width : 100%">
+                 <div class ="col-3 align-self-center "><a>
+     
+				</a></div>
+                 <div class ="col-6 align-self-center " style ="">
+                     <ul>
+                     
+                     <li><a href="/ProjetSiteWeb/PresTerrain">Terrain</a></li>
+                     <li class="traitHead"></li>
+                     
+                     
+                     </ul>
+                 </div>
+                 <div class="col-3 align-self-center " style="text-align: end;">
+                    
+                     
+                     <c:if test="${!empty sessionScope.login}">
+                     
+						Bienvenue ${sessionScope.login}
+						<a href="/ProjetSiteWeb/Deconnexion">se déconnecter</a>
+					</c:if>
+					<c:if test="${empty sessionScope.login}">
+					<a href="/ProjetSiteWeb/Connexion">Se connecter</a>
+                     <button class="btn btn-success linkCompte">Inscrivez-vous</button>
+                     </c:if>
+                 </div>
+            </div>
+            
+            
+        
+    </header>
+    
 
 
-	<c:out value="${ter.id} : "></c:out>
-	<c:out value="${ter.nom}"></c:out> <br>
-	<c:out value="Surface : ${ter.surface} m²"></c:out> 
-	<c:out value="Prix : ${ter.prix} euros"></c:out> 
-	
+<form action="PresTerrain" method="post">
+<c:if test = "${sessionScope.login == 'admin'}">
+<div class="form-group mx-sm-3 mb-2">
+    <label for="exampleInputEmail1">Identifiant</label>
+    <input type="text" name="ida" class="form-control" id="ida" placeholder="ID">
+  </div>
+<div class="form-row">
+    <div class="col">
+      <input type="text" name="noma" id="noma" class="form-control" placeholder="Nom">
+    </div>
+    <div class="col">
+      <input type="text" name="prixa" id="prixa" class="form-control" placeholder="Prix">
+    </div>
+    <div class="col">
+      <input type="text" name="surfacea" id="surfacea" class="form-control" placeholder="Surface">
+    </div>
+  </div>
+	<br>
+ 	<div class="text-center">
+	<button type="submit" class="btn btn-secondary btn-sm center-block">Ajouter un terrain</button>
+ 	</div>
+         
+	</form>
+</c:if>
 
-</c:forEach>
+<br>
+<c:if test="${!empty sessionScope.login}">
+	<a>Voici les terrains disponibles ${sessionScope.login}</a>
+	<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nom</th>
+      <th scope="col">Prix</th>
+      <th scope="col">Surface</th>
+    </tr>
+  </thead>
+ <c:forEach items="${res }" var="ter">
+  <tbody>
+    <tr>
+      <th scope="row">${ter.id}</th>
+      <td>${ter.nom}</td>
+      <td>${ter.prix}</td>
+       <td>${ter.surface}</td>
+    </tr>
+  </tbody>
+  </c:forEach>
+</table>
+<br>
+
+
+</c:if>
+
+<c:if test="${empty sessionScope.login}">
+	Vous devez vous connectez pour accedez aux terrains!
+</c:if>
+
 
 
 </body>

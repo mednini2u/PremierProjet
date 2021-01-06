@@ -10,39 +10,18 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   
-  <servlet>
-    <servlet-name>test</servlet-name>
-    <servlet-class>polytech.JSTL</servlet-class>
-  </servlet>
-
-  <servlet-mapping>
-    <servlet-name>test</servlet-name>
-    <url-pattern>/jspJSTL</url-pattern>
-  </servlet-mapping>
-  
-  
-  
-  
-   <servlet>
-    <servlet-name>test1</servlet-name>
+ <servlet>
+    <servlet-name>un</servlet-name>
     <servlet-class>bdd.Controller</servlet-class>
   </servlet>
+  
 
   <servlet-mapping>
-    <servlet-name>test1</servlet-name>
-    <url-pattern>/BDD</url-pattern>
+  
+    <servlet-name>un</servlet-name>
+    <url-pattern>/PresTerrain</url-pattern>
   </servlet-mapping>
   
-  
-  <servlet>
-    <servlet-name>ok</servlet-name>
-    <servlet-class>site.Connexion</servlet-class>
-  </servlet>
-
-  <servlet-mapping>
-    <servlet-name>ok</servlet-name>
-    <url-pattern>/Con</url-pattern>
-  </servlet-mapping>
-  
+   
  
 </web-app>

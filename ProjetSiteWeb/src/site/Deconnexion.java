@@ -8,19 +8,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-
-
 /**
- * Servlet implementation class Connexion
+ * Servlet implementation class Deconnexion
  */
-@WebServlet("/Connexion")
-public class Connexion extends HttpServlet {
+@WebServlet("/Deconnexion")
+public class Deconnexion extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Connexion() {
+    public Deconnexion() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -29,10 +27,9 @@ public class Connexion extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		/*String login = request.getParameter("login");
-		String password = request.getParameter("password");
-		
-		HttpSession session = request.getSession();*/
+		HttpSession session = request.getSession();
+		session.invalidate();
+		System.out.println("Déconnecter");
 		this.getServletContext().getRequestDispatcher("/WEB-INF/Connexion.jsp").forward(request,response);
 	}
 
@@ -41,16 +38,9 @@ public class Connexion extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String login = request.getParameter("login");
-		String password = request.getParameter("password");
 		
-		HttpSession session = request.getSession();
-;		
-		session.setAttribute("login", login);
-		session.setAttribute("password", password);
 		
-		this.getServletContext().getRequestDispatcher("/WEB-INF/Connexion.jsp").forward(request, response);
-		
+		this.getServletContext().getRequestDispatcher("/WEB-INF/Deconnexion.jsp").forward(request,response);
 	}
 
 }

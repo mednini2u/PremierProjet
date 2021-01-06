@@ -10,8 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import bdd.Terrain;
-import bdd.Ter;
+
 
 /**
  * Servlet implementation class Controller
@@ -19,7 +18,7 @@ import bdd.Ter;
 @WebServlet("/Controller")
 public class Controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+    private Ter terrains = new Ter();
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -31,11 +30,6 @@ public class Controller extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		List<Terrain> terrains = new ArrayList<Terrain>();
-		/*terrains.add(new Etudiant(1, "a", "a"));
-		terrains.add(new Etudiant(2, "b", "b"));
-		terrains.add(new Etudiant(3, "c", "c"));
-		terrains.add(new Etudiant(4, "d", "d"));*/
 		
 		request.setAttribute("terrains", terrains);
 		
@@ -50,9 +44,16 @@ public class Controller extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
+		Terrain ter = new Terrain();
+		ter.setId(Integer.parseInt(request.getParameter("ida")));
+		ter.setNom(request.getParameter("noma"));
+		ter.setPrix(Double.parseDouble(request.getParameter("prixa")));
+		ter.setSurface(Double.parseDouble(request.getParameter("surfacea")));
+		
+		Ter terrains = new Ter();
+		terrains.ajouter(ter);
 		doGet(request, response);
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
 	}
 
 }

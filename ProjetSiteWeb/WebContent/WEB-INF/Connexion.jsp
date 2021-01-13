@@ -14,69 +14,42 @@
 	<link href="css/bootstrap-grid.css" rel="stylesheet" type="text/css" />
 	<link href="js/bootstrap.js" rel="stylesheet" type="text/js" />
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
-	
-
-	
 </head>
 
 <body>
 <header>    
-    
-            <div class="row justify-content-between" style="width : 100%">
-                 <div class ="col-3 align-self-center "><a>
-     
-				</a></div>
-                 <div class ="col-6 align-self-center " style ="">
-                     <ul>
-                     
-                     <li><a href="/ProjetSiteWeb/PresTerrain">Terrain</a></li>
-                     <li class="traitHead"></li>
-                     <li><a href="parc.html">Parc</a></li>
-                     <li class="traitHead"></li>
-                     <li><a href="terrain.html">Forêt</a></li>
-                     <li class="traitHead"></li>
-                     <li><a href="parc.html">Champs</a></li>
-                     
-                     </ul>
-                 </div>
+            <div class="row justify-content-between vw-100">
+                 <div class ="col-3 align-self-center "><a href="/ProjetSiteWeb/Index"><img src="wire/logo4.png" alt="logo Terrain Facile"></a></div>
+                 
                  <div class="col-3 align-self-center " style="text-align: end;">
-                    
-                     
                      <c:if test="${!empty sessionScope.login}">
-                     
 						Bienvenue ${sessionScope.login}
-						<a href="/ProjetSiteWeb/Deconnexion">se déconnecter</a>
+						<a class="btn btn-success linkCompte" href="/ProjetSiteWeb/Deconnexion">Se déconnecter</a>
 					</c:if>
+					
 					<c:if test="${empty sessionScope.login}">
 					<a href="/ProjetSiteWeb/Connexion">Se connecter</a>
-                     <button class="btn btn-success linkCompte">Inscrivez-vous</button>
+                     <a class="btn btn-success linkCompte" href="/ProjetSiteWeb/Inscription">Inscrivez-vous</a>
                      </c:if>
                  </div>
-            </div>
-            
-            
-        
+            </div> 
     </header>
     
     
       <form action="Connexion" method="post">
       
-     
-      
-      <div class="container text-center">    
-        <div id="loginbox" style="margin-top:30px;text-align;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-center">                    
-            <div class="panel panel-success text-center" >
+      <div class="container">    
+      	<div class="row bloctitreRecherches" style="width:400px"><span class="titreRecherche">Se connecter :</span></div>
+        <!--  <div id="loginbox" style="margin-top:30px;text-align;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-center">     -->               
+            <div class="row panel panel-success justify-content-center">
                    
 							<c:if test="${empty sessionScope.login}">
-                     
-				
-					
 
-                            <div style="margin-bottom: 25px" class="input-group text-center">
+                            <div style="margin-bottom: 25px" class="row justify-content-center input-group text-center col-xl-8 col-lg-8 col-md-10 col-sm-10 col-10">
                                         <input type="text" id="login"  class="form-control text-center" name="login"  placeholder="Pseudonyme">                                        
                             </div>
                             
-                            <div style="margin-bottom: 25px" class="input-group text-center">
+                            <div style="margin-bottom: 25px" class="row input-group text-center col-xl-8 col-lg-8 col-md-10 col-sm-10 col-10">
                                         <input type="password" id="password"  class="form-control text-center" name="password"  placeholder="Mot de passe">                                        
                             </div>
                             
@@ -94,11 +67,7 @@
             </div>
          </div>
    		</div>
-                       
-               Session ça fonctionne, admin pour ajouter des terrains, deconnexion fonctionen aussi
-                       
                           
-                            
    	 </form>
 			
 	

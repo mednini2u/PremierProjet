@@ -34,6 +34,17 @@
     <url-pattern>/Annonce</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    <servlet-name>inscription</servlet-name>
+    <servlet-class>site.Inscription</servlet-class>
+  </servlet>
+  
+
+  <servlet-mapping>
+  
+    <servlet-name>inscription</servlet-name>
+    <url-pattern>/FormInscription</url-pattern>
+  </servlet-mapping>
   
   
   

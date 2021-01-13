@@ -299,20 +299,12 @@ h1 {
 	text-align: justify;
     font-family: Georgia;
 }
-.annonce {
-    border-radius: 15px;
-    margin: 20px auto;
-    background-color: #059c20;
-}
 .lienAnnonce {
     font-size: 1.3em;
     color: white;
     text-decoration: none;
 }
-.decouvrir {
-    margin: 20px;
-    text-align: center;
-}
+
 .lienDecouvrir {
     font-size: 1.3em;
     color: #059c20;

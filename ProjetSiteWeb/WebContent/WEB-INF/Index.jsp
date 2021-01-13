@@ -32,8 +32,8 @@
             </div> 
     </header>
 	
-    
 	<div class="row justify-content-between" style="margin : 50px" >
+<<<<<<< HEAD
         <div class="col-xl-4 col-lg-4 col-md-3" style="margin : auto 0;">
             <div class="row justify-content-center">
                 <div class="accroche">Organisez tout votre évènement, en un seul clic</div>
@@ -45,6 +45,19 @@
                 <div class="decouvrir"><a class=" lienDecouvrir" href="/ProjetSiteWeb/PresTerrain">Découvrir nos terrains</a></div>
             </div>
         </div>
+=======
+		<div class="col-xl-4 col-lg-4 col-md-3" style="margin : auto 0;">
+			<div class="row justify-content-center" style="margin : 20px auto">
+				<div class="accroche">Organisez tout votre évènement, en un seul clic</div>
+			</div>
+			<div class="row justify-content-center" style="margin : 20px auto">
+    			<a class="btn w-50 btn-success lienAnnonce" href="/ProjetSiteWeb/Annonce" style="margin : auto;">Déposer une annonce</a>
+    		</div>
+    		<div class="row justify-content-center" style="margin : 20px auto">
+    			<a class="lienDecouvrir" href="/ProjetSiteWeb/PresTerrain">Découvrir nos terrains</a>
+    		</div>
+    	</div>
+>>>>>>> 788498f3edfba1eaa3204b78249544699853be71
         <div class ="col-xl-4 col-lg-7 col-md-8 col-xs-10 col-12 h-100"><img src="img/photo.jpg" alt="photo de terrain"/></div>
     </div>	
 

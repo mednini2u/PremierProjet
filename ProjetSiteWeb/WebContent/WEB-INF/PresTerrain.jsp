@@ -15,26 +15,40 @@
 </head>
 <body>
 <header>    
+<<<<<<< HEAD
     		  <header>    
             <div class="row justify-content-between vw-100">
                  <div class ="col-3 align-self-center "><a href="/ProjetSiteWeb/Index"><img src="wire/logo4.png" alt="logo Terrain Facile"></a></div>
                  
                  <div class="col-3 align-self-center" style="text-align: end;">
+=======
+            <div class="row justify-content-between vw-100">
+                 <div class ="col-3 align-self-center "><a href="/ProjetSiteWeb/Index"><img src="wire/logo4.png" alt="logo Terrain Facile"></a></div>
+                 
+                 <div class="col-3 align-self-center " style="text-align: end;">
+>>>>>>> 788498f3edfba1eaa3204b78249544699853be71
                      <c:if test="${!empty sessionScope.login}">
 						Bienvenue ${sessionScope.login}
 						<a class="btn btn-success linkCompte" href="/ProjetSiteWeb/Deconnexion">Se déconnecter</a>
 					</c:if>
 					
 					<c:if test="${empty sessionScope.login}">
+<<<<<<< HEAD
 					<a class="" href="/ProjetSiteWeb/Connexion">Se connecter</a>
+=======
+					<a href="/ProjetSiteWeb/Connexion">Se connecter</a>
+>>>>>>> 788498f3edfba1eaa3204b78249544699853be71
                      <a class="btn btn-success linkCompte" href="/ProjetSiteWeb/Inscription">Inscrivez-vous</a>
                      </c:if>
                  </div>
             </div> 
+<<<<<<< HEAD
     </header>
             
             
         
+=======
+>>>>>>> 788498f3edfba1eaa3204b78249544699853be71
     </header>
     
 

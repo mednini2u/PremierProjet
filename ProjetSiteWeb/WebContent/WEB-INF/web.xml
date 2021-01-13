@@ -22,17 +22,7 @@
     <url-pattern>/PresTerrains</url-pattern>
   </servlet-mapping>
   
-  <servlet>
-    <servlet-name>deux</servlet-name>
-    <servlet-class>bdd.Terrains</servlet-class>
-  </servlet>
-  
-
-  <servlet-mapping>
-  
-    <servlet-name>deux</servlet-name>
-    <url-pattern>/Annonce</url-pattern>
-  </servlet-mapping>
+ 
   
   <servlet>
     <servlet-name>inscription</servlet-name>

@@ -13,16 +13,7 @@
     </head>
 
 <body>
-    <!--  <header>    
-            <div class="row justify-content-between vw-100">
-                 <div class ="col-3 align-self-center "><a href="/ProjetSiteWeb/Index"><img src="wire/logo4.png" alt="logo Terrain Facile"></a></div>
-             
-                 <div class="col-3 align-self-center " style="text-align: end;">
-                     <a href="compte.html">Se connecter</a>
-                     <a class="btn btn-success linkCompte" href="/ProjetSiteWeb/Inscription">Inscrivez-vous</a>
-                 </div>
-            </div>
-    </header>-->
+
     <header>    
             <div class="row justify-content-between vw-100">
                  <div class ="col-3 align-self-center "><a href="/ProjetSiteWeb/Index"><img src="wire/logo4.png" alt="logo Terrain Facile"></a></div>
@@ -43,10 +34,16 @@
 	
     
 	<div class="row justify-content-between" style="margin : 50px" >
-		<div class="col-xl-4 col-lg-4 col-3-md" style="margin : auto 0;">
-			<div class="accroche">Organisez tout votre évènement, en un seul clic</div>
-    		<a class="btn w-50 btn-success annonce lienAnnonce" style="text-align: center;" href="/ProjetSiteWeb/Annonce" style="margin : auto;">Déposer une annonce</a>
-    		<div class="decouvrir"><a class="lienDecouvrir" href="/ProjetSiteWeb/PresTerrain">Découvrir nos terrains</a></div>
+        <div class="col-xl-4 col-lg-4 col-md-3" style="margin : auto 0;">
+            <div class="row justify-content-center">
+                <div class="accroche">Organisez tout votre évènement, en un seul clic</div>
+            </div>
+            <div class="row justify-content-center">
+                <a class="btn w-50 btn-success lienAnnonce" href="/ProjetSiteWeb/Annonce" style="margin : auto;">Déposer une annonce</a>
+            </div>
+            <div class="row justify-content-center">
+                <div class="decouvrir"><a class=" lienDecouvrir" href="/ProjetSiteWeb/PresTerrain">Découvrir nos terrains</a></div>
+            </div>
         </div>
         <div class ="col-xl-4 col-lg-7 col-md-8 col-xs-10 col-12 h-100"><img src="img/photo.jpg" alt="photo de terrain"/></div>
     </div>	

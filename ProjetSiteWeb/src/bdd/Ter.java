@@ -100,8 +100,17 @@ public class Ter {
 		this.seConnecter();
 		
 		try {
+			PreparedStatement pst1 = this.connection.prepareStatement("select max(`id`)+1 from `terrains`");
+            ResultSet rs = pst1.executeQuery();
+            int user_id = 0;
+            while(rs.next())
+            {
+                user_id = rs.getInt(1);
+            }
+            
+            
 			PreparedStatement prs = this.connection.prepareStatement("INSERT INTO `terrains`(`id`, `nom`, `prix`, `surface`) VALUES (?,?,?,?);");
-			prs.setInt(1, 56);
+			prs.setInt(1, user_id);
 			prs.setString(2, terrain.getNom());
 			prs.setDouble(3, terrain.getPrix());
 			prs.setDouble(4, terrain.getSurface());

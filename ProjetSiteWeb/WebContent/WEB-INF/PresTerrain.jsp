@@ -15,67 +15,28 @@
 </head>
 <body>
 <header>    
-    		 <div class="row justify-content-between vw-100">
-                 <div class ="col-3 align-self-center "><a href="index.html"><img src="wire/logo4.png" alt="logo Terrain Facile"></a></div>
-            
-            <div class="row justify-content-between" style="width : 100%">
-                 <div class ="col-3 align-self-center "><a>
-     
-				</a></div>
-                 <div class ="col-6 align-self-center " style ="">
-                     <ul>
-                     
-                     <li><a href="/ProjetSiteWeb/PresTerrain">Terrain</a></li>
-                     <li class="traitHead"></li>
-                     
-                     
-                     </ul>
-                 </div>
-                 <div class="col-3 align-self-center " style="text-align: end;">
-                    
-                     
+    		  <header>    
+            <div class="row justify-content-between vw-100">
+                 <div class ="col-3 align-self-center "><a href="/ProjetSiteWeb/Index"><img src="wire/logo4.png" alt="logo Terrain Facile"></a></div>
+                 
+                 <div class="col-3 align-self-center" style="text-align: end;">
                      <c:if test="${!empty sessionScope.login}">
-                     
 						Bienvenue ${sessionScope.login}
-						<a href="/ProjetSiteWeb/Deconnexion">se déconnecter</a>
+						<a class="btn btn-success linkCompte" href="/ProjetSiteWeb/Deconnexion">Se déconnecter</a>
 					</c:if>
+					
 					<c:if test="${empty sessionScope.login}">
-					<a href="/ProjetSiteWeb/Connexion">Se connecter</a>
-                     <button class="btn btn-success linkCompte">Inscrivez-vous</button>
+					<a class="" href="/ProjetSiteWeb/Connexion">Se connecter</a>
+                     <a class="btn btn-success linkCompte" href="/ProjetSiteWeb/Inscription">Inscrivez-vous</a>
                      </c:if>
                  </div>
-            </div>
+            </div> 
+    </header>
             
             
         
     </header>
     
-
-
-<form action="PresTerrain" method="post">
-<c:if test = "${sessionScope.login == 'admin'}">
-<div class="form-group mx-sm-3 mb-2">
-    <label for="exampleInputEmail1">Identifiant</label>
-    <input type="text" name="ida" class="form-control" id="ida" placeholder="ID">
-  </div>
-<div class="form-row">
-    <div class="col">
-      <input type="text" name="noma" id="noma" class="form-control" placeholder="Nom">
-    </div>
-    <div class="col">
-      <input type="text" name="prixa" id="prixa" class="form-control" placeholder="Prix">
-    </div>
-    <div class="col">
-      <input type="text" name="surfacea" id="surfacea" class="form-control" placeholder="Surface">
-    </div>
-  </div>
-	<br>
- 	<div class="text-center">
-	<button type="submit" class="btn btn-secondary btn-sm center-block">Ajouter un terrain</button>
- 	</div>
-         
-	</form>
-</c:if>
 
 <br>
 <c:if test="${!empty sessionScope.login}">

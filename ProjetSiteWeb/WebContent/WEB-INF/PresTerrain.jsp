@@ -15,39 +15,21 @@
 </head>
 <body>
 <header>    
-    		 <div class="row justify-content-between vw-100">
-                 <div class ="col-3 align-self-center "><a href="index.html"><img src="wire/logo4.png" alt="logo Terrain Facile"></a></div>
-            
-            <div class="row justify-content-between" style="width : 100%">
-                 <div class ="col-3 align-self-center "><a>
-     
-				</a></div>
-                 <div class ="col-6 align-self-center " style ="">
-                     <ul>
-                     
-                     <li><a href="/ProjetSiteWeb/PresTerrain">Terrain</a></li>
-                     <li class="traitHead"></li>
-                     
-                     
-                     </ul>
-                 </div>
+            <div class="row justify-content-between vw-100">
+                 <div class ="col-3 align-self-center "><a href="/ProjetSiteWeb/Index"><img src="wire/logo4.png" alt="logo Terrain Facile"></a></div>
+                 
                  <div class="col-3 align-self-center " style="text-align: end;">
-                    
-                     
                      <c:if test="${!empty sessionScope.login}">
-                     
 						Bienvenue ${sessionScope.login}
-						<a href="/ProjetSiteWeb/Deconnexion">se déconnecter</a>
+						<a class="btn btn-success linkCompte" href="/ProjetSiteWeb/Deconnexion">Se déconnecter</a>
 					</c:if>
+					
 					<c:if test="${empty sessionScope.login}">
 					<a href="/ProjetSiteWeb/Connexion">Se connecter</a>
-                     <button class="btn btn-success linkCompte">Inscrivez-vous</button>
+                     <a class="btn btn-success linkCompte" href="/ProjetSiteWeb/Inscription">Inscrivez-vous</a>
                      </c:if>
                  </div>
-            </div>
-            
-            
-        
+            </div> 
     </header>
     
 

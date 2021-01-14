@@ -11,8 +11,7 @@
 </head>
 
 <body>
-    <header>    
-         <header>    
+    <header>     
             <div class="row justify-content-between vw-100">
                  <div class ="col-3 align-self-center "><a href="/ProjetSiteWeb/Index"><img src="wire/logo4.png" alt="logo Terrain Facile"></a></div>
                  
@@ -29,56 +28,74 @@
                  </div>
             </div> 
     </header>
-    </header>
 
 <c:if test="${!empty sessionScope.login}">
 			<div id="messages" class="hide" role="alert">
               <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
               <div id="messages_content"></div>
             </div>
-	<form id="form" action="Annonce" method="post">
-	
-	   <div class="row bloctitreRecherches" style="width:600px"><span class="titreRecherche">Déposer une annonce :</span></div>
+	<form name="form1" id="form1" action="Annonce" method="post" onsubmit="required()">
+    
+    <div class="container justify-content-center">
 
-            <div class="row titreAnnonce">
+	   <div class="row bloctitreRecherches" style="width:600px ; text-align : center;"><span class="titreRecherche">Déposer une annonce :</span></div>
+
+            <div class="row titreAnnonce" style="width : 600px">
                 <div class="col">
-                    <label class="textAnnonce" for="titre">Titre de l'offre :</label>
-                    <input style="width : 520px" type="text" name="noma" id="noma"/>
+                    <label for="titre">Titre de l'offre :</label>
+                    <input class="w-100" type="text" name="noma" id="noma"/>
                 </div>
             </div>
             
-            <div class="row justify-content-between surfacePrix">
-                <div class="col-5">
+            <div class="row justify-content-between surfacePrix"  style="width : 600px">
+                <div class="col-6">
                     <label class="textAnnonce" for="surface">Surface (m²) :</label><br>
-                    <input type="text" name="surfacea" id="surfacea"/>
+                    <input class="w-100" type="text" name="surfacea" id="surfacea"/>
                 </div>
-                <div class="col-5">
+                <div class="col-6">
                     <label class="textAnnonce" for="prix">Prix (€/j) :</label><br>
-                    <input type="text" name="prixa" id="prixa"/>
-                </div>
-                
-                <div class="col-5">
-                    <label class="textAnnonce" for="ida">ID :</label><br>
-                    <input type="text" name="ida" id="ida"/>
-                </div>
-                
+                    <input class="w-100" type="text" name="prixa" id="prixa"/>
+                </div>    
             </div>
 
-            <div class="text-center">
+            <div class="row justify-content-center">
 				<button type="submit" class="btn btn-secondary btn-sm center-block">Ajouter un terrain</button>
- 			</div>
+             </div>
+    </div>
  	</form>
  	
  			<script src="http://code.jquery.com/jquery.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
         <script>
+        function required()
+        {
+        	var empt = document.forms["form1"]["noma"].value;
+        	var empt2 = document.forms["form1"]["surfacea"].value;
+        	var empt3 = document.forms["form1"]["prixa"].value;
+        	if (empt == "" || empt2 == "" || empt3 == "")
+        	{
+        		alert("Formulaire vide!");
+        		return false;
+        	}
+        	else 
+        	{
+        		alert('Annonce envoyée!');
+        		return true; 
+        	}
+        }
+        /*
+        function
             $('#form').submit(function(e) {
+            	if($("#txtID").val()==''){
+                    event.PreventDefault();
+                    alert("your message");
+               }
                 $('#messages').removeClass('hide').addClass('alert alert-success alert-dismissible').slideDown().show();
                 $('#messages_content').html('<h4>Terrain enregistré</h4>');
                 $('#modal').modal('show');
-                e.preventDefault();
-            });
+                
+            });*/
         </script>
 
      

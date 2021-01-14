@@ -1,4 +1,4 @@
-package bdd;
+package compte;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,9 +9,9 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import bdd.Terrain;
 
-public class Ter {
-	
+public class Cli {
 	private Connection connection;
 
 	public Connection getConnection() {
@@ -41,8 +41,8 @@ public class Ter {
 	}
 	
 	
-	public List<Terrain> afficher(){
-		List<Terrain> res = new ArrayList<Terrain>();
+	public List<Client> afficher(){
+		List<Client> res = new ArrayList<Client>();
 
 		this.seConnecter();
 		
@@ -59,15 +59,15 @@ public class Ter {
 				
 				statement = connection.createStatement();
 				//execute une requete et récuperer le contenu dans l'objet résultSet
-				resultSet = statement.executeQuery("SELECT * FROM `terrains`");
+				resultSet = statement.executeQuery("SELECT * FROM `clients`");
 				
 				//récupération des données...
 				while(resultSet.next()) {
 					int id = resultSet.getInt("id");
-					String nom = resultSet.getString("nom");
-					double surface = resultSet.getDouble("surface");
-					double prix = resultSet.getDouble("prix");
-					res.add(new Terrain(id, nom, surface, prix));
+					String pseudo = resultSet.getString("nom");
+					String mail = resultSet.getString("mail");
+					String password = resultSet.getString("password");
+					res.add(new Client(id, pseudo, mail, password));
 				}
 				
 				
@@ -96,11 +96,11 @@ public class Ter {
 	}
 	
 		
-	public void ajouter(Terrain terrain) {
+	public void ajouter(Client client) {
 		this.seConnecter();
 		
 		try {
-			PreparedStatement pst1 = this.connection.prepareStatement("select max(`id`)+1 from `terrains`");
+			PreparedStatement pst1 = this.connection.prepareStatement("select max(`id`)+1 from `clients`");
             ResultSet rs = pst1.executeQuery();
             int user_id = 0;
             while(rs.next())
@@ -111,10 +111,9 @@ public class Ter {
             
 			PreparedStatement prs = this.connection.prepareStatement("INSERT INTO `terrains`(`id`, `nom`, `prix`, `surface`) VALUES (?,?,?,?);");
 			prs.setInt(1, user_id);
-			prs.setString(2, terrain.getNom());
-			prs.setDouble(3, terrain.getPrix());
-			prs.setDouble(4, terrain.getSurface());
-			
+			prs.setString(2, client.getPseudo());
+			prs.setString(3, client.getMail());
+			prs.setString(3, client.getPassword());
 
 			prs.executeUpdate();
 		
@@ -125,23 +124,6 @@ public class Ter {
 	}
 
 
-	public void supprimer(int idSup) {
-		this.seConnecter();
-		
-		// failles d'injection SQL
-		try {
-			PreparedStatement prs = this.connection.prepareStatement("DELETE FROM `terrains` WHERE `id`=?");
-			prs.setInt(1, idSup);
 	
-			prs.executeUpdate();
-		} 
-		
-		catch (SQLException e) {
-			e.printStackTrace();
-			System.out.println("Problème dans la suppresion d'un terrain");
-		}
-	}
 
-	
-		
 }

@@ -35,57 +35,29 @@
     
 <div class="container "> 
         <form method="post" action="inscription.php">
-            <h1>Crée ton compte le Terrain Facile :</h1>
-
-                <div class="row justify-content-center">
-                    <div class="col-4">
-                        <label for="prenom">Prénom :</label></br>
-                        <input type="texte" name="prenom" id="prenom" placeholder=" ex: Pierre"/>
-                    </div>
-                    <div class="col-4">
-                        <label class="label" for="nom">Nom :</label></br>
-                        <input  type="texte" name="nom" id="nom" placeholder=" ex: Dupont"/>
-                    </div>
+<div class="row bloctitreRecherches" style="width:400px"><span class="titreRecherche">S'inscrire:</span></div>
+   
+             <div class="row panel panel-success justify-content-center">
+             
+                <div style="margin-bottom: 25px" class="row justify-content-center input-group text-center col-xl-8 col-lg-8 col-md-10 col-sm-10 col-10">
+                            <input type="text" id="login"  class="form-control text-center" name="login"  placeholder="Pseudonyme">                                        
                 </div>
-
-                <div class="row row justify-content-center">
-                    <div class="col-8">
-                        <label class="label" for="mail">Adresse e-mail :</label></br>
-                        <input type="email" name="mail" id="mail" placeholder= "exemple@leterrainfacile.com">
-                    </div>
+                            
+                <div style="margin-bottom: 25px" class="row justify-content-center input-group text-center col-xl-8 col-lg-8 col-md-10 col-sm-10 col-10">
+                     <input type="text" id="mail"  class="form-control text-center" name="mail"  placeholder="E-mail">                                        
                 </div>
-
-                <div class="row justify-content-center">
-                    <div class="col-4">
-                        <label class="label" for="mdp">Mot de passe :</label></br>
-                        <input type="password" name="mdp" id="mdp" placeholder=" ex: motdepasse"/>
-                    </div> 
-                    <div class="col-4">
-                        <label class="label" for="confirmation">Confirmer :</label></br>
-                        <input type="password" name="confirmation" id="confirmation" placeholder=" ex: motdepasse"/>
-                    </div>
-                </div>
-
-                <div class="row justify-content-center">
-              
-                    <div class="col-4"> Genre </br>
-                        <label class="label" for="madame"> Mme</label>
-                        <input type="checkbox" name="madame" id="madame"/>
-                        <label class="label" for="monsieur"> M.</label>
-                        <input type="checkbox" name="monsieur" id="monsieur"/>
-                    </div>
-                    <div class="col-4">
-                        <label class="label" for="societe">Societe : </label></br>
-                        <input type="text" name="societe" id="societe" placeholder=" Facultatif">
-                    </div>
-                </div>
+                            
+                <div style="margin-bottom: 25px" class="row input-group text-center col-xl-8 col-lg-8 col-md-10 col-sm-10 col-10">
+                    <input type="password" id="password"  class="form-control text-center" name="password"  placeholder="Mot de passe">
+                     <input type="password" id="password"  class="form-control text-center" name="password"  placeholder="Confirmer mot de passe">                                         
+               	</div>
 
               
 
-                <div class="row">
-                    <div class="col-2"></div>
-                    <button class="btn btn-primary text-center"> S'inscrire </button>
-            </div>
+                <div class="col-sm-12 controls text-center">
+                              <input type="submit" id="btn-login" class="btn btn-success" value="S'inscrire">
+                            </div>
+                            </div>
         </form>
     </div>
 

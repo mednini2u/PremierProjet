@@ -41,14 +41,41 @@ public class Annonce extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Terrain ter = new Terrain();
-		ter.setId(Integer.parseInt(request.getParameter("ida")));
-		ter.setNom(request.getParameter("noma"));
-		ter.setPrix(Double.parseDouble(request.getParameter("prixa")));
-		ter.setSurface(Double.parseDouble(request.getParameter("surfacea")));
+		//ter.setId(Integer.parseInt(request.getParameter("ida")));
 		
-		Ter terrains = new Ter();
-		terrains.ajouter(ter);
+		String nom = request.getParameter("noma");
+		String prix = request.getParameter("prixa");
+		String surface = request.getParameter("surfacea");
+		
+		if(nom == null || nom.isEmpty() || prix == null || prix.isEmpty() || surface == null || surface.isEmpty()) {
+			System.out.println("Formulaire incomplet");
+		}
+		else {
+			ter.setNom(nom);
+			ter.setPrix(Double.parseDouble(request.getParameter("prixa")));
+			ter.setSurface(Double.parseDouble(request.getParameter("surfacea")));
+			Ter terrains = new Ter();
+			terrains.ajouter(ter);
+		}
+		
+		
+		
+		
+		/*
+		if(nom == null || nom.isEmpty() || prix == null || prix.isNaN() || surface == null || surface.isNaN()) {
+			System.out.println("Formulaire incomplet");
+		}
+		else {
+			ter.setNom(nom);
+			ter.setPrix(Double.parseDouble(request.getParameter("prixa"));
+			ter.setSurface(Double.parseDouble(request.getParameter("surfacea"));
+			Ter terrains = new Ter();
+			terrains.ajouter(ter);
+			
+		}
+		*/
 		doGet(request, response);
+		
 	}
 
 }

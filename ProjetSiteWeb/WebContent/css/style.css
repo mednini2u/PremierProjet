@@ -145,7 +145,7 @@ h1 {
     font-size: 2em;
     font-weight: bold;
     background-color: white;
-    width: 450px;
+    width: 700px;
     border-radius: 15px;
 }
 .bloctitreRecherches {
@@ -322,13 +322,8 @@ h1 {
     margin: auto 0;
 }
 .elementRecherche {
-    width: 700px;
-    height: 100px;
+    width: 700px;  
     margin: 20px auto;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    background-color:#f2f7f3;
     border-radius: 15px;
     box-shadow:  1px 1px 0px #636362;
 }

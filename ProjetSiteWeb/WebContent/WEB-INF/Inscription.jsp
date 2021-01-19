@@ -34,13 +34,14 @@
     </header>
     
 <div class="container "> 
-        <form method="post" action="inscription.php">
+        <form name="form2" id="form2" method="post" action="Inscription" onsubmit="required(); redirect();">
 <div class="row bloctitreRecherches" style="width:400px"><span class="titreRecherche">S'inscrire:</span></div>
    
              <div class="row panel panel-success justify-content-center">
              
                 <div style="margin-bottom: 25px" class="row justify-content-center input-group text-center col-xl-8 col-lg-8 col-md-10 col-sm-10 col-10">
-                            <input type="text" id="login"  class="form-control text-center" name="login"  placeholder="Pseudonyme">                                        
+                            <input type="text" id="pseudo"  class="form-control text-center" name="pseudo"  placeholder="Pseudonyme"> 
+                                                                   
                 </div>
                             
                 <div style="margin-bottom: 25px" class="row justify-content-center input-group text-center col-xl-8 col-lg-8 col-md-10 col-sm-10 col-10">
@@ -48,8 +49,8 @@
                 </div>
                             
                 <div style="margin-bottom: 25px" class="row input-group text-center col-xl-8 col-lg-8 col-md-10 col-sm-10 col-10">
-                    <input type="password" id="password"  class="form-control text-center" name="password"  placeholder="Mot de passe">
-                     <input type="password" id="password"  class="form-control text-center" name="password"  placeholder="Confirmer mot de passe">                                         
+                    <input type="password" id="password1"  class="form-control text-center" name="password1"  placeholder="Mot de passe">
+                     <input type="password" id="password2"  class="form-control text-center" name="password2"  placeholder="Confirmer mot de passe">                                         
                	</div>
 
               
@@ -60,6 +61,42 @@
                             </div>
         </form>
     </div>
+   
+    
+    <script>
+    	function required()
+    	{
+    	var empt = document.forms["form2"]["pseudo"].value;
+    	var empt2 = document.forms["form2"]["mail"].value;
+    	var empt3 = document.forms["form2"]["password1"].value;
+    	var empt4 = document.forms["form2"]["password2"].value;
+    	if (empt == "" || empt2 == "" || empt3 == "" || empt4 == "")
+    	{
+    		alert("Formulaire incomplet!");
+    		return false;
+    	}
+    	else 
+    	{
+    		if(empt3 != empt4){
+        			alert("Les mots de passe sont différents!");
+        			return false;
+    		}
+    		else{
+        			alert('Inscription terminée! Vous pouvez dès à présent vous connecter.');
+            		return true; 
+            		
+        		}
+    		
+    	}
+    
+    	}
+    	
+    	function redirect()
+    	{
+    		window.location.href="Index";
+    	}
+    </script>
+
 
         <div class="espaceFooter"></div>  <!--bloc qui permet d'obtenir un espace entre le haut de page et le dï¿½but du contenu, il fait la taille du header-->
 </body>

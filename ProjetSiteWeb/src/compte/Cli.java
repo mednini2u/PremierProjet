@@ -64,7 +64,7 @@ public class Cli {
 				//récupération des données...
 				while(resultSet.next()) {
 					int id = resultSet.getInt("id");
-					String pseudo = resultSet.getString("nom");
+					String pseudo = resultSet.getString("pseudo");
 					String mail = resultSet.getString("mail");
 					String password = resultSet.getString("password");
 					res.add(new Client(id, pseudo, mail, password));
@@ -100,6 +100,7 @@ public class Cli {
 		this.seConnecter();
 		
 		try {
+			
 			PreparedStatement pst1 = this.connection.prepareStatement("select max(`id`)+1 from `clients`");
             ResultSet rs = pst1.executeQuery();
             int user_id = 0;
@@ -109,21 +110,65 @@ public class Cli {
             }
             
             
-			PreparedStatement prs = this.connection.prepareStatement("INSERT INTO `terrains`(`id`, `nom`, `prix`, `surface`) VALUES (?,?,?,?);");
-			prs.setInt(1, user_id);
-			prs.setString(2, client.getPseudo());
-			prs.setString(3, client.getMail());
-			prs.setString(3, client.getPassword());
+			
+            PreparedStatement ps = this.connection.prepareStatement("SELECT `pseudo` from `clients` WHERE pseudo = '" + client.getPseudo() + "'");
+            ResultSet resultSet = ps.executeQuery();
+            if(resultSet.next()) {
+                //final int count = resultSet.getInt(1);
+                System.out.println("-Le pseudo utilisé existe déjà");
+            }
+            
+            else {
+            	PreparedStatement prs = this.connection.prepareStatement("INSERT INTO `clients`(`id`, `pseudo`, `mail`, `password`) VALUES (?,?,?,?);");
+    			prs.setInt(1, user_id);
+    			prs.setString(2, client.getPseudo());
+    			prs.setString(3, client.getMail());
+    			prs.setString(4, client.getPassword());
 
-			prs.executeUpdate();
+    			prs.executeUpdate();
+            }
+          
+			
 		
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("Problème dans l'ajout d'un terrain");
+			System.out.println("Problème dans l'ajout d'un client");
 		}
 	}
 
+	
+	public boolean exist(Client client) {
+		this.seConnecter();
+		boolean okPseudo = false;
+		try {
+			
+			
+			PreparedStatement ps = this.connection.prepareStatement("SELECT * FROM clients WHERE pseudo='"+client.getPseudo()+"' AND password='"+client.getPassword()+"'");
+			System.out.println(client.getPseudo());
+			System.out.println(client.getPassword());
+			ResultSet rs = ps.executeQuery();
+			
+            if(rs.next()) {
+                System.out.println("Le pseudo utilisé existe déjà");
+                okPseudo = true;
+                return okPseudo;
+            }
+			else {
+				System.out.println("Pseudo non utilisé : ok");
+				 okPseudo = false;
+	                return okPseudo;    
+			}
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("Problème dans la recherche d'un client");
+			 okPseudo = false;
+             return okPseudo;
+		}
 
+		
+	}
 	
 
 }

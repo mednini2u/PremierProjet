@@ -46,9 +46,10 @@
 							<c:if test="${empty sessionScope.login}">
 
                             <div style="margin-bottom: 25px" class="row justify-content-center input-group text-center col-xl-8 col-lg-8 col-md-10 col-sm-10 col-10">
-                                        <input type="text" id="login"  class="form-control text-center" name="login"  placeholder="Pseudonyme">                                        
+                                        <input type="text" id="pseudo"  class="form-control text-center" name="pseudo"  placeholder="Pseudonyme">                                        
                             </div>
-                            
+          
+                           
                             <div style="margin-bottom: 25px" class="row input-group text-center col-xl-8 col-lg-8 col-md-10 col-sm-10 col-10">
                                         <input type="password" id="password"  class="form-control text-center" name="password"  placeholder="Mot de passe">                                        
                             </div>
@@ -58,17 +59,24 @@
                             </div>
                             
                             </c:if>
-                    		
-                    		<c:if test="${!empty sessionScope.login}" >
-                    		<p>Vous êtes connecté !</p>
-                    		<p><a href="/ProjetSiteWeb/Deconnexion">se déconnecter</a></p>
+                    		<c:if test="${okPseudo == true}">
+                    			<c:if test="${!empty sessionScope.login}" >
+                    			<p>Vous êtes connecté ${sessionScope.login}!</p>
+                    			<p><a href="/ProjetSiteWeb/Deconnexion">Se déconnecter</a></p>
+                    			</c:if>       		
                     		</c:if>
-                    		
+                    		<c:if test="${okPseudo == false}">
+                    			<c:if test="${empty sessionScope.login}" >
+                    			<br>
+                    			<p>Compte non existant ou mot de passe érroné.</p>
+                    			</c:if>       		
+                    		</c:if>
             </div>
-         </div>
-   		</div>
+        </div>
+   		
                           
    	 </form>
+   	 
 			
 	
 

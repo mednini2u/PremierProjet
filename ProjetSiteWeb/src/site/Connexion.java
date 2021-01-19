@@ -8,6 +8,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import compte.Cli;
+import compte.Client;
+
 
 
 /**
@@ -16,7 +19,7 @@ import javax.servlet.http.HttpSession;
 @WebServlet("/Connexion")
 public class Connexion extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+	private Cli clients = new Cli();
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -29,10 +32,11 @@ public class Connexion extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		/*String login = request.getParameter("login");
-		String password = request.getParameter("password");
+		request.setAttribute("clients", clients);
 		
-		HttpSession session = request.getSession();*/
+		
+		Cli ListeClient = new Cli();
+		request.setAttribute("res", ListeClient.afficher());
 		this.getServletContext().getRequestDispatcher("/WEB-INF/Connexion.jsp").forward(request,response);
 	}
 
@@ -40,14 +44,27 @@ public class Connexion extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		String login = request.getParameter("login");
+		Client cli = new Client();
+		String login = request.getParameter("pseudo");
 		String password = request.getParameter("password");
 		
-		HttpSession session = request.getSession();
-;		
-		session.setAttribute("login", login);
-		session.setAttribute("password", password);
+		cli.setPseudo(login);
+		cli.setPassword(password);
+		
+		boolean test = clients.exist(cli);
+		
+		System.out.println(test);
+		if(test == false) {
+			request.setAttribute("okPseudo", false);
+		}
+		else {
+			request.setAttribute("okPseudo", true);
+			HttpSession session = request.getSession();		
+			session.setAttribute("login", login);
+			session.setAttribute("password", password);
+			this.getServletContext().getRequestDispatcher("/WEB-INF/Connexion.jsp").forward(request, response);
+		}
+			
 		
 		this.getServletContext().getRequestDispatcher("/WEB-INF/Connexion.jsp").forward(request, response);
 		

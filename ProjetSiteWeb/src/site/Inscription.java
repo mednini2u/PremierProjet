@@ -47,21 +47,28 @@ public class Inscription extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Client cli = new Client();
-		//ter.setId(Integer.parseInt(request.getParameter("ida")));
+		
 		
 		String pseudo = request.getParameter("pseudo");
 		String mail = request.getParameter("mail");
-		String password = request.getParameter("password");
+		String password1 = request.getParameter("password1");
+		String password2 = request.getParameter("password2");
 		
-		if(pseudo == null || pseudo.isEmpty() || mail == null || mail.isEmpty() || password == null || password.isEmpty()) {
+		if(pseudo == null || pseudo.isEmpty() || mail == null || mail.isEmpty() || password1 == null || password1.isEmpty() || password2 == null || password2.isEmpty()) {
 			System.out.println("Formulaire incomplet");
 		}
 		else {
-			cli.setPseudo(pseudo);
-			cli.setMail(mail);
-			cli.setPassword(password);
-			Cli clients = new Cli();
-			clients.ajouter(cli);
+			if(clients.exist(cli) == false && (password1.equals(password2))) {
+				cli.setPseudo(pseudo);
+				cli.setMail(mail);
+				cli.setPassword(password1);
+				Cli clients = new Cli();
+				clients.ajouter(cli);
+			}
+			else  {
+				System.out.println("Mots de passe différents");
+			}
+			
 		}
 		
 		doGet(request, response);

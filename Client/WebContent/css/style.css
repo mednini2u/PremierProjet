@@ -1,0 +1,493 @@
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+ header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    margin: 0;
+    border-bottom: 0.5px solid black;
+    overflow: hidden;
+    background-color: #545252;
+    color: white;  
+}
+header ul {
+    display: flex;
+    list-style-type: none;
+    margin : 0;
+    padding :0;
+}
+header ul li {
+    margin: auto 40px;
+}
+header a {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: white;
+    padding: 5px;
+    margin: auto 5px;
+}
+footer {
+    width: 100%;
+    height: 30px;
+    margin: 0;
+    padding: auto;
+    bottom: 0;
+    position: fixed;
+    background-color: #545252;
+}
+footer ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding:0;
+    margin:0;
+}
+.linkFooter {
+    font-size: 1.1em;
+    color: white;
+    margin: auto;
+    text-decoration: none;
+}
+h1 {
+    font-size: 1.7em;
+    margin: 20px 20px auto auto;
+    width: 450px;
+    font-weight: bold;
+}
+
+.red {
+    background-color: red;
+    }
+    
+    .green {
+        background-color: green;
+    }
+    .blue {
+        background-color:  blue;
+        }
+    
+    .inputMail {
+        width: 562px;
+    }
+.espace {
+    height: 80px;
+}
+.espaceFooter {
+    height: 58px;
+    margin: 0;
+}
+.textLink {
+    font-size: 1em;
+    color: white;
+    text-decoration: none;
+}
+.head2 {
+    display: flex;
+    margin: auto 30px;
+    color: white;
+}
+.link {
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    margin: auto 5px;
+}
+.linkCompte {
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 20px;
+    background-color: #059c20;
+}
+.accroche {
+    font-size: 2.5em;
+    color: black;
+    text-align: center;
+}
+.blocCentral {
+    width: 90%;
+    margin: 30px auto;
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+}
+.blocCentralgauche {
+    margin: auto 30px;
+}
+.bloc1 {
+    width: 700px;
+    height: 250px;
+    margin: 0px auto auto auto;
+    padding: 20px 40px;
+    overflow: hidden;
+    border-radius : 15px;
+}
+.bloc2 {
+    width: 700px;
+    height: 200px;
+    overflow: hidden;
+    margin: 30px auto auto auto;
+    border-radius : 15px;
+    padding: 20px 40px;
+}
+.titreRecherche {
+    font-size: 2em;
+    font-weight: bold;
+    background-color: white;
+    width: 700px;
+    border-radius: 15px;
+}
+.bloctitreRecherches {
+    margin: 15px auto;
+    width: 700px;
+    border-bottom: 0.5px solid black;
+    padding: 3px;
+}
+.blocRecherche {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    width: 650px;
+}
+.surfaceLieu {
+    display: flex;
+    justify-content: space-between;
+    width: 650px;
+    margin: 10px auto;
+    padding: 0;
+}
+.typePrix {
+    display: flex;
+    justify-content: space-between;
+    width: 650px;
+    margin: 10px auto;
+    padding: 0;
+}
+.bouton {
+    text-align: left;
+    width: 650px;
+    margin: 20px auto auto auto;
+}
+.groupe {
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    width: 1000px;
+    margin: 30px auto;
+    padding: 5px;
+    border-radius: 15px;
+}
+.photo1 {
+    padding: 30px;
+}
+.photo2 {
+    text-align: center;
+    padding: 0 10px 10px 10px;
+}
+.desc {
+    width:1000px;
+    background-color: white;
+    text-align: justify;
+    margin: 30px auto auto auto;
+    padding: 20px;
+    border-radius: 15px;
+}
+.blocConnect {
+    background-color: white;
+    margin: 50px auto;
+    height: 350px;  
+    width: 510px;
+    padding: 15px;
+    border-radius : 15px;
+    border: 1px solid black;
+}
+.inputConnect {
+    width: 300px;
+    height: 20px;
+    border: 0.5px solid black;
+    border-radius: 5px;
+}
+.inputInscription {
+    width: 200px;
+    height: 20px;
+    border: 0.5px solid black;
+    border-radius: 5px;
+}
+.elementConnect {
+    display: flex;
+    justify-content: space-between;
+    margin: 35px;
+}
+.seConnecter {
+    text-align: left;
+    color: black;
+    width: 450px;
+    margin: 10px auto;
+}
+.piedConnect {
+    display: flex;
+    width: 260px;
+    margin: 30px auto;
+}
+.elementPied {
+    margin: 5px;
+    font-size: 1.1em;
+}
+.mdp {
+    text-align: center;
+    margin: 10px;
+}
+.inscrire {
+    font-size: 1.7em;
+    margin: 20px 20px auto auto;
+    width: 450px;
+    font-weight: bold;
+}
+.mail {
+    width: 450px;
+    margin: 10px auto;
+    padding: 5px;
+}
+.nomPrenom {
+    display: flex;
+    width: 450px; 
+    justify-content: space-between;
+    margin: 10px auto;
+    padding: 0px;
+}
+.genreDate {
+    display: flex;
+    width: 450px;
+    justify-content: space-between;
+    margin: 10px auto;
+    padding: 5px;
+}
+.date {
+    display: flex;
+    justify-content: space-between;
+}
+.dateNaissance {
+    width: 450px;
+    height: 70px;
+    margin: 10px auto;
+    padding: 5px;
+}
+.mdpInscription
+{
+    display: flex;
+    width: 450px;
+    justify-content: space-between;
+    margin: 10px auto;
+    padding: 5px;
+}
+.text2 {
+	width: 670px;
+	margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+	text-align: justify;
+    font-family: Georgia;
+}
+.lienAnnonce {
+    font-size: 1.3em;
+    color: white;
+    text-decoration: none;
+}
+
+.lienDecouvrir {
+    font-size: 1.3em;
+    color: #059c20;
+}
+.trait {
+    border-bottom: 0.4px solid black;
+    width: 100%;
+    height: 1px;
+    margin: 0px;
+}
+.traitHead {
+    border-right: 0.2px solid white;
+    width:1px;
+    height: 20px;
+    margin: auto 0;
+}
+.elementRecherche {
+    width: 700px;  
+    margin: 20px auto;
+    border-radius: 15px;
+    background-color: #F1FFF6;
+}
+.titreTerrain {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin: 5px 15px 15px 15px;
+    color: black;
+}
+.caracteristiquesTerrain {
+    font-size: 1.2em;
+    margin: 5px 15px;
+    color: black;
+}
+.imgRecherche {
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+}
+.simplif {
+    font-size: 1.4em;
+    
+    text-align: justify;
+    line-height: 40px;
+}
+.blocInscription {
+    background-color: white;
+    margin: 50px auto;
+    height: 440px;  
+    width: 510px;
+    padding: 15px;
+    border-radius : 15px;
+    border: 1px solid black;
+}
+.boutonInscrire {
+    margin: 0px 30px 10px 280px;
+    width: 200px;
+    height: 30px;
+}
+.boutonConnect {
+    margin: 10px 35px 10px 275px;
+    width: 200px;
+    height: 30px;
+}
+.OffreDemande {
+    width: 400px;
+    height: 50px;
+    margin: 30px auto;
+    display: flex;
+    padding:0;
+}
+.linkAnnonce {
+    font-size: 1.3em;
+    color: black;
+    text-decoration: none;
+    margin: auto;
+    text-align: center;
+}
+.blocOffre {
+    margin: 0;
+    padding: 10px 0 0 0;
+    width: 200px;
+    background-color: white;
+    border-left: 0.5px solid black;
+    border-top: 0.5px solid black;
+    border-bottom: 0.5px solid black;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-align: center;
+}
+.blocDemande{
+    margin: 0;
+    padding: 10px 0 0 0;
+    width: 200px;
+    background-color: white;
+    border: 0.5px solid black;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-align: center;
+}
+.traitAnnonce {
+    height: 50px;
+    width: 0.1px;
+    margin: 0;
+    border-right: 0.4px solid black;
+
+}
+.blocAnnonceOffre {
+    width: 600px;
+    height: 620px;
+    margin: 30px auto 180px auto;
+    border-radius: 15px;
+    background-color: white;
+    border: 1px solid black;
+}
+.blocAnnonceDemande {
+    width: 600px;
+    height: 720px;
+    margin: 30px auto 180px auto;
+    border-radius: 15px;
+    background-color: white;
+    border: 1px solid black;
+}
+.titreAnnonce {
+    width: 450px;
+    margin: 15px auto;
+    font-size: 1.3em;
+}
+.inputTitre {
+    width: 450px;
+    height: 30px;
+    margin: 10px auto;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    padding: 3px;
+}
+.surfacePrix {
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
+    margin: 15px auto;
+    font-size: 1.3em;
+}
+.inputSurface {
+    width: 150px;
+    height: 20px;
+    border: 0.5px solid black;
+    margin: 10px auto;
+    border-radius: 5px;
+    padding: 3px;
+}
+.desc {
+    width: 450px;
+    font-size: 1.3em;
+    margin: 10px auto;
+    padding: 0;
+}
+.inputDesc {
+    width: 450px;
+    height: 200px;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0;
+    text-align: justify;
+    font-family: Georgia sans-serif;    
+    font-size: 0.8em;
+}
+.submitAnnonce {
+    width: 450px;
+    margin: 20px auto;
+    height: 20px;
+}
+.boutonAnnonce {
+    text-align: center;
+    width: 300px;
+    height: 20px;
+}
+.inputMail {
+    width: 446px; 
+    height: 20px; 
+    border-radius: 5px; 
+    border: 0.5px solid black;
+}
+.label {
+    font-size: 1.3em;
+}

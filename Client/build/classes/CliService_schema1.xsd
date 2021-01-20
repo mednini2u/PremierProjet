@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://www.polytech.fr" xmlns:tns="http://www.polytech.fr" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="afficherClient" type="tns:afficherClient"/>
+
+  <xs:element name="afficherClientResponse" type="tns:afficherClientResponse"/>
+
+  <xs:element name="ajouterClient" type="tns:ajouterClient"/>
+
+  <xs:element name="ajouterClientResponse" type="tns:ajouterClientResponse"/>
+
+  <xs:element name="client" type="tns:client"/>
+
+  <xs:element name="existClient" type="tns:existClient"/>
+
+  <xs:element name="existClientResponse" type="tns:existClientResponse"/>
+
+  <xs:element name="hashPasswordClient" type="tns:hashPasswordClient"/>
+
+  <xs:element name="hashPasswordClientResponse" type="tns:hashPasswordClientResponse"/>
+
+  <xs:element name="logClient" type="tns:logClient"/>
+
+  <xs:element name="logClientResponse" type="tns:logClientResponse"/>
+
+  <xs:element name="seConnecterClient" type="tns:seConnecterClient"/>
+
+  <xs:element name="seConnecterClientResponse" type="tns:seConnecterClientResponse"/>
+
+  <xs:complexType name="hashPasswordClient">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="hashPasswordClientResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="seConnecterClient">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="seConnecterClientResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="logClient">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:client" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="client">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int"/>
+      <xs:element name="mail" type="xs:string" minOccurs="0"/>
+      <xs:element name="password" type="xs:string" minOccurs="0"/>
+      <xs:element name="pseudo" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="logClientResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ajouterClient">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:client" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ajouterClientResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="existClient">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:client" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="existClientResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="afficherClient">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="afficherClientResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:client" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

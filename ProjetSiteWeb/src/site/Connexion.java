@@ -46,14 +46,15 @@ public class Connexion extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Client cli = new Client();
 		String login = request.getParameter("pseudo");
-		String password = request.getParameter("password");
+		String password = clients.hash(request.getParameter("password"));
 		
+		System.out.println("Pass:" + clients.hash(password));
 		cli.setPseudo(login);
 		cli.setPassword(password);
 		
 		boolean test = clients.exist(cli);
 		
-		System.out.println(test);
+		System.out.println("TEST CON : " +test);
 		if(test == false) {
 			request.setAttribute("okPseudo", false);
 		}
@@ -62,7 +63,7 @@ public class Connexion extends HttpServlet {
 			HttpSession session = request.getSession();		
 			session.setAttribute("login", login);
 			session.setAttribute("password", password);
-			this.getServletContext().getRequestDispatcher("/WEB-INF/Connexion.jsp").forward(request, response);
+			//this.getServletContext().getRequestDispatcher("/WEB-INF/Connexion.jsp").forward(request, response);
 		}
 			
 		

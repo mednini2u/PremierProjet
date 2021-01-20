@@ -62,7 +62,7 @@
                     		<c:if test="${okPseudo == true}">
                     			<c:if test="${!empty sessionScope.login}" >
                     			<p>Vous êtes connecté ${sessionScope.login}!</p>
-                    			<p><a href="/ProjetSiteWeb/Deconnexion">Se déconnecter</a></p>
+                    			<p><br><a href="/ProjetSiteWeb/Deconnexion">Se déconnecter</a></p>
                     			</c:if>       		
                     		</c:if>
                     		<c:if test="${okPseudo == false}">

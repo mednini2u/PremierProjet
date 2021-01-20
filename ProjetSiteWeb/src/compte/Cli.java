@@ -1,5 +1,8 @@
 package compte;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.security.spec.KeySpec;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -7,7 +10,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.List;
+import java.util.Random;
+
+import javax.crypto.SecretKeyFactory;
+import javax.crypto.spec.PBEKeySpec;
 
 import bdd.Terrain;
 
@@ -119,6 +127,7 @@ public class Cli {
             }
             
             else {
+            	
             	PreparedStatement prs = this.connection.prepareStatement("INSERT INTO `clients`(`id`, `pseudo`, `mail`, `password`) VALUES (?,?,?,?);");
     			prs.setInt(1, user_id);
     			prs.setString(2, client.getPseudo());
@@ -137,6 +146,31 @@ public class Cli {
 	}
 
 	
+	public String hash(String password) {
+		try {
+			MessageDigest digest = MessageDigest.getInstance("SHA-256");
+			digest.update(password.getBytes());
+			byte[] result = digest.digest();
+			StringBuilder sb = new StringBuilder();
+			
+			for(byte b : result) {
+				sb.append(String.format("%02x",b));
+				
+			}
+			
+			return sb.toString();
+			
+			
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		
+		return "";
+	}
+		
+		
+	
+
 	public boolean exist(Client client) {
 		this.seConnecter();
 		boolean okPseudo = false;
@@ -144,8 +178,6 @@ public class Cli {
 			
 			
 			PreparedStatement ps = this.connection.prepareStatement("SELECT * FROM clients WHERE pseudo='"+client.getPseudo()+"' AND password='"+client.getPassword()+"'");
-			System.out.println(client.getPseudo());
-			System.out.println(client.getPassword());
 			ResultSet rs = ps.executeQuery();
 			
             if(rs.next()) {
@@ -156,7 +188,7 @@ public class Cli {
 			else {
 				System.out.println("Pseudo non utilisé : ok");
 				 okPseudo = false;
-	                return okPseudo;    
+	             return okPseudo;    
 			}
 			
 			

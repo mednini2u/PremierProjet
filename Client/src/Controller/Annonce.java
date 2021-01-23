@@ -47,7 +47,7 @@ public class Annonce extends HttpServlet {
 		Terrain ter = new Terrain();
 		//ter.setId(Integer.parseInt(request.getParameter("ida")));
 		
-		String nom = request.getParameter("noma");
+		String nom = new String(request.getParameter("noma").getBytes("ISO-8859-1"), "UTF-8");
 		String prix = request.getParameter("prixa");
 		String surface = request.getParameter("surfacea");
 		

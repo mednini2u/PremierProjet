@@ -48,7 +48,7 @@ public class Inscription extends HttpServlet {
 		Client cli = new Client();
 		//ter.setId(Integer.parseInt(request.getParameter("ida")));
 		
-		String login = request.getParameter("pseudo");
+		String login = new String(request.getParameter("pseudo").getBytes("ISO-8859-1"), "UTF-8");
 		String mail = request.getParameter("mail");
 		String password1 = clients.hashPasswordClient(request.getParameter("password1"));
 		String password2 = clients.hashPasswordClient(request.getParameter("password2"));
@@ -63,6 +63,7 @@ public class Inscription extends HttpServlet {
 		if(login == null || login.isEmpty() || mail == null || mail.isEmpty() || password1 == null || password1.isEmpty() || password2 == null || password2.isEmpty()) {
 			System.out.println("Formulaire incomplet");
 			request.setAttribute("Form", false);
+			this.getServletContext().getRequestDispatcher("/WEB-INF/Inscription.jsp").forward(request,response);
 		}
 		else {
 			request.setAttribute("Form", true);
@@ -73,17 +74,20 @@ public class Inscription extends HttpServlet {
 				cli.setMail(mail);
 				cli.setPassword(password1);
 				clients.ajouterClient(cli);
+				this.getServletContext().getRequestDispatcher("/WEB-INF/Connexion.jsp").forward(request,response);
 			}
 			else if(test == true) {
 				System.out.println("Pseudo deja existant");
 				request.setAttribute("okPseudo", true);
 				request.setAttribute("Mdpdif", false);
+				this.getServletContext().getRequestDispatcher("/WEB-INF/Inscription.jsp").forward(request,response);
 			}
 			else {
 				
 				System.out.println("Mots de passe differents");
 				request.setAttribute("okPseudo", false);
 				request.setAttribute("Mdpdif", true);
+				this.getServletContext().getRequestDispatcher("/WEB-INF/Inscription.jsp").forward(request,response);
 			}	
 		}
 		doGet(request, response);

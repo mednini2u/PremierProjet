@@ -64,7 +64,7 @@
 		<div class="row">
 			<div class="col" style="text-align:center;">
 				<p>Il faut que vous soyez connecté pour déposer une annonce !</p>
-				<p>Si vous avez déjà un compte, pour vous connecter en cliquant sur ce lien : 
+				<p>Si vous avez déjà un compte, vous pouvez vous connecter en cliquant sur ce lien : 
 				<a href="Connexion">Se connecter</a></p>
 				<p>Sinon, vous pouvez en créer un en cliquant sur ce lien :
 				<a href="Inscription">S'inscrire</a></p>

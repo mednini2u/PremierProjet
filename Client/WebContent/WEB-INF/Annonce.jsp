@@ -88,18 +88,6 @@
         		return true; 
         	}
         }
-        /*
-        function
-            $('#form').submit(function(e) {
-            	if($("#txtID").val()==''){
-                    event.PreventDefault();
-                    alert("your message");
-               }
-                $('#messages').removeClass('hide').addClass('alert alert-success alert-dismissible').slideDown().show();
-                $('#messages_content').html('<h4>Terrain enregistré</h4>');
-                $('#modal').modal('show');
-                
-            });*/
         </script>
 
 </c:if>
@@ -113,7 +101,7 @@
 		<div class="row">
 			<div class="col" style="text-align:center;">
 				<p>Il faut que vous soyez connecté pour déposer une annonce !</p>
-				<p>Si vous avez déjà un compte, pour vous connecter en cliquant sur ce lien : 
+				<p>Si vous avez déjà un compte, vous pouvez vous connecter en cliquant sur ce lien : 
 				<a href="Connexion">Se connecter</a></p>
 				<p>Sinon, vous pouvez en créer un en cliquant sur ce lien :
 				<a href="Inscription">S'inscrire</a></p>

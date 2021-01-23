@@ -38,7 +38,7 @@ public class Ter {
 		}
 		
 		try {
-			connection = DriverManager.getConnection("jdbc:mysql://localhost/test?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "admin", "");
+			connection = DriverManager.getConnection("jdbc:mysql://localhost/terrainfacile?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "root", "");
 			System.out.println("Connecté à la BDD");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

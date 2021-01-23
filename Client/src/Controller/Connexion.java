@@ -47,7 +47,7 @@ public class Connexion extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		Client cli = new Client();
-		String login = request.getParameter("pseudo");
+		String login = new String(request.getParameter("pseudo").getBytes("ISO-8859-1"), "UTF-8");
 		String password = clients.hashPasswordClient(request.getParameter("password"));
 		
 		cli.setPseudo(login);
